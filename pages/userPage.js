@@ -1,4 +1,3 @@
-//const { I } = require("codeceptjs");
 const { I } = inject();
 
 module.exports = {
