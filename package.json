@@ -1,0 +1,17 @@
+{
+  "name": "onbordingproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/selenium-standalone-service": "^7.30.0",
+    "codeceptjs": "^3.4.1",
+    "uuid": "^9.0.1",
+    "webdriverio": "^7.30.0"
+  }
+}
