@@ -14,6 +14,9 @@ exports.config = {
   tests: './tests/*_test.js',
   output: './output',
   helpers: {
+    JanusPersonRecordHelper: {
+      require: './helpers/JanusPersonRecord_Helper.js',
+    },
     WebDriver: {
       url: 'https://www.qa-legacy.com',
       browser: 'chrome'
