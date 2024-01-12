@@ -3,3 +3,6 @@
 
 # CodeceptJS output and logs
 /output
+
+# .env file
+.env

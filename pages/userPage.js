@@ -15,5 +15,4 @@ module.exports = {
     I.fillField(this.txtBoxEmail, email);
     I.click(this.btnSubmit);
   }
-
 }

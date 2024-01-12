@@ -1,7 +1,10 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 Feature('Task_1');
 
 Scenario('test task 1',  ({ I }) => {
-    I.amOnPage('https://www.qa-legacy.com/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379');
+    I.amOnPage(process.env.URL);
     I.see('Virginia', {css: 'h2[data-component="NameHeadingText"]'});
     I.scrollIntoView('#guestbook-form');
     I.fillField('textarea[form="guest-book-add"]', 'TEST OF THE TASK 1');
