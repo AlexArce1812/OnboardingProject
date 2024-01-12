@@ -58,7 +58,7 @@ This framework utilizes a `.env` file; make sure to create it in the project's r
     LEGACYDB_INSTANCE=
     URL=
 
-Feel free to customize these variables
+Feel free to customize these variables on your  `.env` file
 
 
 

@@ -22,4 +22,4 @@ Scenario('test using POM with functions @GuestBook',  ({ I }) => {
     I.scrollIntoView(userPage.guestBook);
     userPage.fill_guest_book_and_submit('TEST OF THE TASK 2','Alex Ramirez Arce','alejandro.arce@wizeline.com')
     I.wait(1);
-}).tag('@onboardingProject').tag('@webDriver').tag('@productionSafe')
+}).tag('@onboardingProject').tag('@webDriver').tag('@productionSafe') 
