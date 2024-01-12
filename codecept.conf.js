@@ -17,6 +17,16 @@ exports.config = {
     JanusPersonRecordHelper: {
       require: './helpers/JanusPersonRecord_Helper.js',
     },
+    REST: {
+      endpoint: 'https://www.qa-legacy.com/us/obituaries/chicagotribune/name', 
+      prettyPrintJson: true,
+      onRequest: (request) => {
+        request.headers.auth = '123';
+      },
+    },
+    ChaiWrapper: {
+      require: "codeceptjs-chai"
+  },
     WebDriver: {
       url: 'https://www.qa-legacy.com',
       browser: 'chrome'
