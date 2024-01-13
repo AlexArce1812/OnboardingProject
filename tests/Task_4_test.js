@@ -1,4 +1,4 @@
-Feature('Task_4');
+Feature('Task_4 #depr');
 const data = new DataTable(['url', 'expectedStatusCode']);
 
 data.add(['/virginia-gruchalski-obituary?pid=196167379', 200]);
@@ -14,4 +14,4 @@ Data(data).Scenario('test url status codes @GuestBook',  async ({ I, current }) 
     const response = await I.sendGetRequest(current.url);
     console.log('Response:', response);
     I.assertEqual(response.status, current.expectedStatusCode);
-}).tag('@onboardingProject').tag('@REST').tag('@productionSafe')
+})
