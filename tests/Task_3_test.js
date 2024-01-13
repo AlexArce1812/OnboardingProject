@@ -3,7 +3,7 @@ const JanusPersonRecordHelper = require('../helpers/JanusPersonRecord_Helper')
 const dotenv = require('dotenv');
 dotenv.config();
 
-Feature('Task_3');
+Feature('Task_3 #depr');
 
 Scenario('dinamic test', async ({ I }) => {
     I.amOnPage(process.env.URL);
@@ -14,7 +14,7 @@ Scenario('dinamic test', async ({ I }) => {
     I.wait(1);
 }).tag('@onboardingProject').tag('@webDriver').tag('@productionSafe').tag('@QueryRequest')
 
-Scenario('dinamic test with data from the DB @GuestBook', async ({ I }) => {
+Scenario('dinamic test with data from the DB ', async ({ I }) => {
     const person = await I.getJanusPersonRecord();
     const personId = person.PersonId;
     const personName = person.FirstName + ' ' + person.MiddleName + ' ' + person.LastName;
