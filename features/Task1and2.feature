@@ -5,7 +5,7 @@ Feature: Task 1 and 2
 @GuestBook  @onboardingProject @Webdriver @janusPersonHelper @productionSafe @task_1_and_2
   Scenario: Test 1 and 2 using BDD
     Given I open virginia page
-    When I Assert that the decedents first name appears in the Name section
-    And I Scroll down until the Guest Book is visible
+    Then I Assert that the decedents first name appears in the Name section
+    When I Scroll down until the Guest Book is visible
     Then I Leave a Guest Book entry
 
