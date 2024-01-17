@@ -1,4 +1,4 @@
-Feature('Task_4');
+Feature('Task_4 #depr');
 const data = new DataTable(['url', 'expectedStatusCode']);
 
 data.add(['/virginia-gruchalski-obituary?pid=196167379', 200]);
@@ -9,9 +9,9 @@ Scenario('create 404 status code response', async ({ I }) => {
   console.log('Response:', response);
     I.assertEqual(response.status, 404);
 })
-Data(data).Scenario('test url status codes @GuestBook',  async ({ I, current }) => {
+Data(data).Scenario('test url status codes ',  async ({ I, current }) => {
 
     const response = await I.sendGetRequest(current.url);
     console.log('Response:', response);
     I.assertEqual(response.status, current.expectedStatusCode);
-}).tag('@onboardingProject').tag('@REST').tag('@productionSafe')
+})

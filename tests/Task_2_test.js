@@ -2,10 +2,10 @@ const userPage = require('../pages/userPage');
 const dotenv = require('dotenv');
 dotenv.config();
 
-Feature('Task_2');
+Feature('Task_2 #depr');
 
 
-Scenario('test using POM @GuestBook',  ({ I }) => {
+Scenario('test using POM',  ({ I }) => {
     I.amOnPage(process.env.URL);
     I.see('Virginia', userPage.txtName);
     I.scrollIntoView(userPage.guestBook);
@@ -16,10 +16,10 @@ Scenario('test using POM @GuestBook',  ({ I }) => {
     I.wait(1);
 });
 
-Scenario('test using POM with functions @GuestBook',  ({ I }) => {
+Scenario('test using POM with functions',  ({ I }) => {
     I.amOnPage(process.env.URL);
     I.see('Virginia', userPage.txtName);
     I.scrollIntoView(userPage.guestBook);
     userPage.fill_guest_book_and_submit('TEST OF THE TASK 2','Alex Ramirez Arce','alejandro.arce@wizeline.com')
     I.wait(1);
-}).tag('@onboardingProject').tag('@webDriver').tag('@productionSafe') 
+})

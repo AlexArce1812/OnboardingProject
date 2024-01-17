@@ -25,8 +25,8 @@ exports.config = {
       },
     },
     ChaiWrapper: {
-      require: "codeceptjs-chai"
-  },
+      require: 'codeceptjs-chai'
+    },
     WebDriver: {
       url: 'https://www.qa-legacy.com',
       browser: 'chrome'
@@ -34,14 +34,49 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    userPage: "./pages/userPage.js"
+    userPage: './pages/userPage.js'
+  },
+  mocha: {},
+  bootstrap: null,
+  timeout: null,
+  teardown: null,
+  hooks: [],
+  gherkin: {
+    features: './features/*.feature',
+    steps: ['./step_definitions/Task1AND2_steps.js',
+            './step_definitions/Task3_steps.js',
+            './step_definitions/Task4_steps.js']
   },
   name: 'onbordingProject',
   plugins: {
+    screenshotOnFail: {
+      enabled: true
+    },
     wdio: {
       enabled: true,
       services: ['selenium-standalone']
-    }
-  }
-
+    },
+    tryTo: {
+      enabled: true
+    },
+    retryFailedStep: {
+      enabled: false
+    },
+    retryTo: {
+      enabled: true
+    },
+    eachElement: {
+      enabled: true
+    },
+    pauseOnFail: {}
+  },
+  stepTimeout: 0,
+  stepTimeoutOverride: [{
+      pattern: 'wait.*',
+      timeout: 0
+    },
+    {
+      pattern: 'amOnPage',
+      timeout: 0
+    }],
 }
